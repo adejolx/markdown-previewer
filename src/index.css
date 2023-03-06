@@ -38,3 +38,39 @@ a,
 button {
   cursor: pointer;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+pre > code,
+code {
+  background-color: rgba(206, 212, 218, 0.5);
+  padding-block: 0.25rem;
+  padding-inline: 0.35rem;
+  border-radius: 5px;
+}
+
+code {
+  display: inline;
+  overflow: auto;
+}
+
+pre > code {
+  display: block;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+table,
+td,
+th {
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5rem;
+}

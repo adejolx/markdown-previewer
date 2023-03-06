@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
-import "./hljs.css";
 import { Tabs, Tab, TabList, TabPanel, TabPanels } from "./components/Tabs";
 import Editor from "./components/Editor";
 import Previewer from "./components/Previewer";
@@ -8,22 +7,23 @@ import Cluster from "./components/Cluster";
 
 function App() {
   const [input, setInput] = useState("");
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    const tabWidth = `   `;
-    if (e.key === "Tab" && e.shiftKey) {
+    if (e.key === "Tab" && textAreaRef.current) {
       e.preventDefault();
-      const start = e.currentTarget.selectionStart;
-      const end = e.currentTarget.selectionEnd;
-      setInput(
-        `${input.substring(0, start)}${tabWidth}${input.substring(end)}`
-      );
-      // Set the cursor position to be after the inserted tab
-      e.currentTarget.selectionEnd = start + 1;
+      const { selectionStart, selectionEnd } = textAreaRef.current;
+      const start = selectionStart;
+      const end = selectionEnd;
+      const updatedText =
+        input.substring(0, start) + "\t" + input.substring(end, input.length);
+      setInput(updatedText);
+      textAreaRef.current.value = updatedText;
+      textAreaRef.current.setSelectionRange(start + 1, start + 1);
     }
   };
 
@@ -50,6 +50,7 @@ function App() {
               onChange={handleChange}
               input={input}
               onKeyDown={handleKeyDown}
+              ref={textAreaRef}
             />
           </TabPanel>
           <TabPanel value="Preview" className="">

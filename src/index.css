@@ -22,7 +22,6 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: var(--ff-primary);
   font-size: var(--fs-med);
   line-height: 1.2;

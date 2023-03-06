@@ -29,9 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <Tabs className="wrapper stack-m " defaultValue="Edit">
+      <Tabs className="wrapper stack-s " defaultValue="Edit">
         <h1 className="secondary-font center-text uppercase spaced-lettering">
-          Markdown Previewer
+          Markdown Previewer 📝
         </h1>
         <TabList className="rounded no-rounded-bottom">
           <Cluster>

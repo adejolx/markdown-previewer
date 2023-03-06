@@ -4,9 +4,10 @@ import { Tabs, Tab, TabList, TabPanel, TabPanels } from "./components/Tabs";
 import Editor from "./components/Editor";
 import Previewer from "./components/Previewer";
 import Cluster from "./components/Cluster";
+import defaultText from "./utils/defautText";
 
 function App() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(defaultText);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

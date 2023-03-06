@@ -8,7 +8,7 @@
 }
 
 :root {
-  --fs-sm: 0.875rem;
+  --fs-sm: 1rem;
   --fs-med: 1.25rem;
   --fs-lg: 2rem;
   --fs-xl: 2.75rem;
@@ -28,15 +28,10 @@ body {
   line-height: 1.2;
 }
 
-a {
-  text-decoration: none;
-  font: inherit;
-  color: inherit;
-}
-
 a,
 button {
   cursor: pointer;
+  font: inherit;
 }
 
 img {
@@ -66,7 +61,7 @@ pre > code {
 table,
 td,
 th {
-  border: 1px solid #333;
+  border: 2px solid rgb(206, 212, 218);
   border-collapse: collapse;
 }
 

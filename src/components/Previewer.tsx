@@ -19,17 +19,14 @@ export default function Previewer({ input }: PreviewProps) {
     pedantic: false,
     gfm: true,
     breaks: true,
-    sanitize: false,
+    sanitize: true,
     smartypants: false,
     xhtml: false,
   });
 
   return (
     <>
-      <div
-        style={{ wordBreak: "break-word" }}
-        dangerouslySetInnerHTML={{ __html: marked.parse(input) }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: marked.parse(input) }}></div>
     </>
   );
 }

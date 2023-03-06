@@ -10,6 +10,7 @@ const Editor = forwardRef<HTMLTextAreaElement, EditorProps>(
   ({ onChange, input, onKeyDown }, ref) => (
     <>
       <textarea
+        className="editor"
         onChange={onChange}
         value={input}
         onKeyDown={onKeyDown}

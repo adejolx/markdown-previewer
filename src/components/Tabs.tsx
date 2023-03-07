@@ -100,7 +100,7 @@ export function Tab({
     <>
       <Element
         className={composeClassNames(INTERNAL_CLASS, className)}
-        style={active ? { backgroundColor: "white", color: "black" } : {}}
+        style={active ? { backgroundColor: "#4f772d", color: "white" } : {}}
         id={buttonId}
         aria-selected={active}
         tabIndex={active ? 0 : -1}
@@ -145,7 +145,7 @@ export function TabPanel({
   className,
   ...props
 }: TabComponentProps) {
-  const INTERNAL_CLASS = "tabs__panel";
+  const INTERNAL_CLASS = "tabs__panel rounded";
   const { tabsId, isActive } = useContext(TabsContext);
   const active = isActive(value);
   const panelId = makeId(tabsId, "panel", value as string);

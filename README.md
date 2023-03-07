@@ -11,6 +11,7 @@ It's a WIP, the next things I want to do are to
 
 1.  improve on focus management
 2.  improve on typography and colors
+3.  improve on accessibility
 
 Resources:
 

@@ -7,9 +7,6 @@ Libraries:
 - React-Typescript
 
 Note:
-
-You'll notice that this lacks proper focus management. In an effort to resolve the conflicts between focus shifting between interactive elements on the page and tab spacing when editing markdown, press `shift + tab` for tab-spacing in markdown or `tab` to shift focus to the next interactive element
-
 It's a WIP, the next things I want to do are to
 
 1.  improve on focus management
